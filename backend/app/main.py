@@ -27,3 +27,10 @@ app.add_middleware(
 app.include_router(auth.router)
 app.include_router(students.router)
 app.include_router(payments.router)
+
+
+@app.get("/")
+def root():
+    return {
+        "message": "SMS Razorpay Backend is Running 🚀"
+    }
